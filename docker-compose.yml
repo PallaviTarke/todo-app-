@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_USER=postgres
+      - DB_HOST=34.58.212.220
+      - DB_NAME=todos
+      - DB_PASSWORD=admin123
+      - PORT=3000
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
